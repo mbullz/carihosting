@@ -365,6 +365,7 @@
     <!-- Price Plan Area End -->
 
     <!-- Call To Action Area Start -->
+    <!--
     <section class="hami-call-to-action">
         <div class="container">
             <div class="row align-items-center">
@@ -377,13 +378,13 @@
                     <div class="cta--content pl-3 mb-100">
                         <h2>Optimized Hosting For WordPress</h2>
                         <p>Deploy your service infrastructure on our fully redundant, high performance cloud platform and benefit from its high reliability, security and enterprise feature set. Easily enhance the performance, security and reliability of your services with one of our managed cloud hosting products, free data migration included.</p>
-                        <!-- Button -->
                         <a href="#" class="btn hami-btn mt-50">Get Start Now!</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    -->
     <!-- Call To Action Area End -->
 
     <!-- Call To Action Area Start -->
@@ -408,7 +409,9 @@
                             <h6><i class="icon_check"></i> 1-Click WordPress Install</h6>
                         </div>
                         <!-- Button -->
+                        <!--
                         <a href="#" class="btn hami-btn">Get Start Now!</a>
+                        -->
                     </div>
                 </div>
             </div>
@@ -422,7 +425,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="support-text">
-                        <h2>Need help? Call our award-winning support team 24/7: +65 1234-6868</h2>
+                        <h2>Need help? Call our award-winning support team 24/7: +62 822-9721-7939</h2>
                     </div>
                 </div>
             </div>
@@ -538,13 +541,7 @@
                             </form>
 
                             <!-- Social Info -->
-                            <div class="social-info">
-                                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                            </div>
+                            <?php require('social-info.php'); ?>
                         </div>
                     </div>
 

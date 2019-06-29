@@ -162,7 +162,7 @@
                     <div class="single-team-member-area d-flex align-items-center mb-30">
                         <!-- Team Thumbnail -->
                         <div class="team-thumbnail">
-                            <img src="img/bg-img/6.jpg" alt="">
+                            <img src="img/bg-img/kosim.jpg" alt="">
                         </div>
                         <!-- Team Content -->
                         <div class="team-content">
@@ -180,7 +180,7 @@
                     <div class="single-team-member-area d-flex align-items-center mb-30">
                         <!-- Team Thumbnail -->
                         <div class="team-thumbnail">
-                            <img src="img/bg-img/7.jpg" alt="">
+                            <img src="img/bg-img/bona.jpeg" alt="">
                         </div>
                         <!-- Team Content -->
                         <div class="team-content">
@@ -198,7 +198,7 @@
                     <div class="single-team-member-area d-flex align-items-center mb-30">
                         <!-- Team Thumbnail -->
                         <div class="team-thumbnail">
-                            <img src="img/bg-img/8.jpg" alt="">
+                            <img src="img/bg-img/dedi.jpeg" alt="">
                         </div>
                         <!-- Team Content -->
                         <div class="team-content">
@@ -276,8 +276,8 @@
                                     <img src="img/bg-img/10.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
-                                    <h5>Beatrice Vega</h5>
-                                    <span>CEO DeerCreative</span>
+                                    <h5>Nadiem Makarim</h5>
+                                    <span>CEO Go-Jek</span>
                                 </div>
                             </div>
                         </div>
@@ -306,8 +306,8 @@
                                     <img src="img/bg-img/11.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
-                                    <h5>Roy Long</h5>
-                                    <span>CEO Colorlib</span>
+                                    <h5>William Tanuwijaya</h5>
+                                    <span>CEO Tokopedia</span>
                                 </div>
                             </div>
                         </div>
@@ -336,8 +336,8 @@
                                     <img src="img/bg-img/12.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
-                                    <h5>Stephen Colon</h5>
-                                    <span>CEO google</span>
+                                    <h5>Ferry Unardi</h5>
+                                    <span>CEO Traveloka</span>
                                 </div>
                             </div>
                         </div>
@@ -366,8 +366,8 @@
                                     <img src="img/bg-img/13.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
-                                    <h5>Kevin Castro</h5>
-                                    <span>CEO facebook</span>
+                                    <h5>Achmad Zaky</h5>
+                                    <span>CEO Bukalapak</span>
                                 </div>
                             </div>
                         </div>
@@ -396,8 +396,8 @@
                                     <img src="img/bg-img/10.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
-                                    <h5>Beatrice Vega</h5>
-                                    <span>CEO DeerCreative</span>
+                                    <h5>Chandra Timothy Liow</h5>
+                                    <span>CEO Mister Potato</span>
                                 </div>
                             </div>
                         </div>
@@ -426,188 +426,8 @@
                                     <img src="img/bg-img/11.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
-                                    <h5>Roy Long</h5>
-                                    <span>CEO Colorlib</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Area -->
-                        <div class="single-testimonial-area">
-                            <div class="testimonial-content">
-                                <!-- Ratings & Quote -->
-                                <div class="ratings-icon d-flex align-items-center justify-content-between">
-                                    <div class="rating">
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="quote-icon">
-                                        <img src="img/core-img/quote.png" alt="">
-                                    </div>
-                                </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
-                            </div>
-                            <!-- Testimonial -->
-                            <div class="testimonial-thumbnail-title d-flex align-items-center">
-                                <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/12.jpg" alt="">
-                                </div>
-                                <div class="testimonial-title">
-                                    <h5>Stephen Colon</h5>
-                                    <span>CEO google</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Area -->
-                        <div class="single-testimonial-area">
-                            <div class="testimonial-content">
-                                <!-- Ratings & Quote -->
-                                <div class="ratings-icon d-flex align-items-center justify-content-between">
-                                    <div class="rating">
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="quote-icon">
-                                        <img src="img/core-img/quote.png" alt="">
-                                    </div>
-                                </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
-                            </div>
-                            <!-- Testimonial -->
-                            <div class="testimonial-thumbnail-title d-flex align-items-center">
-                                <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/13.jpg" alt="">
-                                </div>
-                                <div class="testimonial-title">
-                                    <h5>Kevin Castro</h5>
-                                    <span>CEO facebook</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Area -->
-                        <div class="single-testimonial-area">
-                            <div class="testimonial-content">
-                                <!-- Ratings & Quote -->
-                                <div class="ratings-icon d-flex align-items-center justify-content-between">
-                                    <div class="rating">
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="quote-icon">
-                                        <img src="img/core-img/quote.png" alt="">
-                                    </div>
-                                </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
-                            </div>
-                            <!-- Testimonial -->
-                            <div class="testimonial-thumbnail-title d-flex align-items-center">
-                                <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/10.jpg" alt="">
-                                </div>
-                                <div class="testimonial-title">
-                                    <h5>Beatrice Vega</h5>
-                                    <span>CEO DeerCreative</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Area -->
-                        <div class="single-testimonial-area">
-                            <div class="testimonial-content">
-                                <!-- Ratings & Quote -->
-                                <div class="ratings-icon d-flex align-items-center justify-content-between">
-                                    <div class="rating">
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="quote-icon">
-                                        <img src="img/core-img/quote.png" alt="">
-                                    </div>
-                                </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
-                            </div>
-                            <!-- Testimonial -->
-                            <div class="testimonial-thumbnail-title d-flex align-items-center">
-                                <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/11.jpg" alt="">
-                                </div>
-                                <div class="testimonial-title">
-                                    <h5>Roy Long</h5>
-                                    <span>CEO Colorlib</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Area -->
-                        <div class="single-testimonial-area">
-                            <div class="testimonial-content">
-                                <!-- Ratings & Quote -->
-                                <div class="ratings-icon d-flex align-items-center justify-content-between">
-                                    <div class="rating">
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="quote-icon">
-                                        <img src="img/core-img/quote.png" alt="">
-                                    </div>
-                                </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
-                            </div>
-                            <!-- Testimonial -->
-                            <div class="testimonial-thumbnail-title d-flex align-items-center">
-                                <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/12.jpg" alt="">
-                                </div>
-                                <div class="testimonial-title">
-                                    <h5>Stephen Colon</h5>
-                                    <span>CEO google</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Area -->
-                        <div class="single-testimonial-area">
-                            <div class="testimonial-content">
-                                <!-- Ratings & Quote -->
-                                <div class="ratings-icon d-flex align-items-center justify-content-between">
-                                    <div class="rating">
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                        <i class="icon_star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="quote-icon">
-                                        <img src="img/core-img/quote.png" alt="">
-                                    </div>
-                                </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
-                            </div>
-                            <!-- Testimonial -->
-                            <div class="testimonial-thumbnail-title d-flex align-items-center">
-                                <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/13.jpg" alt="">
-                                </div>
-                                <div class="testimonial-title">
-                                    <h5>Kevin Castro</h5>
-                                    <span>CEO facebook</span>
+                                    <h5>Hary Tanoesoedibjo</h5>
+                                    <span>CEO MNC Group</span>
                                 </div>
                             </div>
                         </div>
@@ -625,7 +445,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="support-text">
-                        <h2>Need help? Call our award-winning support team 24/7: +65 1234-6868</h2>
+                        <h2>Need help? Call our award-winning support team 24/7: +62 822-9721-7939</h2>
                     </div>
                 </div>
             </div>
@@ -741,13 +561,7 @@
                             </form>
 
                             <!-- Social Info -->
-                            <div class="social-info">
-                                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                            </div>
+                            <?php require('social-info.php'); ?>
                         </div>
                     </div>
 

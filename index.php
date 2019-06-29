@@ -113,7 +113,9 @@
                                     <p data-animation="fadeInLeftBig" data-delay="600ms" data-duration="1s">
                                         Semua INFORMASI Hosting yang kamu butuhkan ada disini!
                                     </p>
+                                    <!--
                                     <a href="#" class="btn hami-btn btn-2" data-animation="fadeInLeftBig" data-delay="800ms" data-duration="1s">Get Start Now!</a>
+                                    -->
                                 </div>
                             </div>
                         </div>
@@ -139,7 +141,9 @@
                                     </h2>
                                     <h3 data-animation="fadeInUpBig" data-delay="400ms" data-duration="1s">Starting at <span>$7.99</span> $2.95/month*</h3>
                                     <p data-animation="fadeInUpBig" data-delay="600ms" data-duration="1s">Everything you will EVER need to Host and Manage your Website!</p>
+                                    <!--
                                     <a href="#" class="btn hami-btn btn-2" data-animation="fadeInUpBig" data-delay="800ms" data-duration="1s">Get Start Now!</a>
+                                    -->
                                 </div>
                             </div>
                         </div>
@@ -171,26 +175,26 @@
                 <div class="col-12 col-md-4">
                     <div class="domain-text mb-100">
                         <h2>Cari Nama<br/>untuk WebsiteMu</h2>
-                        <h6>Hanya $7 untuk Tahun Pertama</h6>
+                        <h6>&nbsp;</h6>
                     </div>
                 </div>
                 <div class="col-12 col-md-8">
                     <div class="domain-search-form mb-100">
                         <!-- Search Form -->
-                        <form action="#" method="post" class="form-inline">
-                            <input type="search" placeholder="Enter Your Domain Name Here">
+                        <form id="form-domain-search" action="#" method="post" class="form-inline">
+                            <input type="search" id="domainName" placeholder="Enter Your Domain Name Here">
                             <select name="domain-extension" id="domainExtension">
                                 <option value=".com">.COM</option>
-                                <option value=".com">.NET</option>
-                                <option value=".com">.ORG</option>
-                                <option value=".com">.US</option>
-                                <option value=".com">.BIZ</option>
-                                <option value=".com">.CO</option>
+                                <option value=".co.id">.CO.ID</option>
+                                <option value=".id">.ID</option>
+                                <option value=".net">.NET</option>
+                                <option value=".org">.ORG</option>
                             </select>
                             <button type="submit">Search Domain</button>
                         </form>
 
                         <!-- Domain Price Help -->
+                        <!--
                         <div class="domain-price-help mt-50 d-flex align-items-center justify-content-between">
                             <p>.COM $5.75</p>
                             <p>.NET $9.45</p>
@@ -199,6 +203,9 @@
                             <p>.BIZ $9.99</p>
                             <p>.CO $6.0</p>
                         </div>
+                        -->
+
+                        <div id="domain-search-result" class="mt-50 text-center">&nbsp;</div>
                     </div>
                 </div>
             </div>
@@ -432,7 +439,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="support-text">
-                        <h2>Need help? Call our award-winning support team 24/7: +65 1234-6868</h2>
+                        <h2>Need help? Call our award-winning support team 24/7: +62 822-9721-7939</h2>
                     </div>
                 </div>
             </div>
@@ -548,13 +555,7 @@
                             </form>
 
                             <!-- Social Info -->
-                            <div class="social-info">
-                                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                            </div>
+                            <?php require('social-info.php'); ?>
                         </div>
                     </div>
 
@@ -594,7 +595,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Footer Area End -->
 
     <!-- **** All JS Files ***** -->
-    <!-- jQuery 2.2.4 -->
     <script src="js/jquery.min.js"></script>
     <!-- Popper -->
     <script src="js/popper.min.js"></script>
@@ -604,6 +604,34 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/hami.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+
+            $('#form-domain-search').submit(function (e) {
+                var domainName = $('#domainName').val();
+                var domainExtension = $('#domainExtension').val();
+
+                domainName += domainExtension;
+
+                $('#domain-search-result').html('<img src="img/core-img/loading.gif" width="24px" height="24px" />');
+
+                $.ajax({
+                    url: 'https://domain-availability-api.whoisxmlapi.com/api/v1',
+                    data: 'apiKey=at_KF5CUn6TmfJy3sb4kd0sn4pCzSzYv&domainName=' + domainName,
+                    datatype: 'json',
+                    success: function(result) {
+                        var domainAvailability = result.DomainInfo.domainAvailability;
+                        var domainName = result.DomainInfo.domainName;
+                        $('#domain-search-result').html(domainName + ' is ' + domainAvailability);
+                    },
+                });
+
+                return false;
+            });
+
+        });
+    </script>
 
 </body>
 
