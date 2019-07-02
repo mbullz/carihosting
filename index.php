@@ -231,7 +231,7 @@
                         </div>
                         <div class="feature-text">
                             <h5>Auto Updates</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
+                            <p>Auto Update Manager was developed exclusively in-house to keep client's websites always up-to-date and more secure.</p>
                         </div>
                     </div>
                 </div>
@@ -244,7 +244,7 @@
                         </div>
                         <div class="feature-text">
                             <h5>Optimized Software</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
+                            <p>Our exclusive Turbo Server option offers you the fastest hosting experience!</p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
                         </div>
                         <div class="feature-text">
                             <h5>Daily Backups</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
+                            <p>Daily back-ups are part and parcel of our cloud, WordPress, cPanel, VPS and dedicated server web hosting services.</p>
                         </div>
                     </div>
                 </div>
@@ -270,7 +270,7 @@
                         </div>
                         <div class="feature-text">
                             <h5>Wide Networking</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
+                            <p>Host your site closer to your visitors with our global data center options.</p>
                         </div>
                     </div>
                 </div>
@@ -283,7 +283,7 @@
                         </div>
                         <div class="feature-text">
                             <h5>Protected</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
+                            <p>Enhanced security and trust with Organization Authentication and Extended Validation.</p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
                         </div>
                         <div class="feature-text">
                             <h5>Free Support</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
+                            <p>Our friendly and knowledgeable support team is available 24/7/365 to help!</p>
                         </div>
                     </div>
                 </div>
