@@ -53,7 +53,7 @@
                     <nav class="classy-navbar justify-content-between" id="hamiNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand" href="./"><img src="./img/core-img/logo.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -71,11 +71,6 @@
                                 <?php
                                     require('classynav.php');
                                 ?>
-
-                                <!-- Live Chat -->
-                                <div class="live-chat-btn ml-5 mt-4 mt-lg-0 ml-md-4">
-                                    <a href="#" class="btn hami-btn live--chat--btn"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</a>
-                                </div>
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -94,7 +89,7 @@
                     <div class="breadcrumb-content">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item"><a href="./"><i class="icon_house_alt"></i> Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">About Us</li>
                             </ol>
                         </nav>
@@ -555,7 +550,7 @@
                             <p>Subscribe to our email newsletter for useful tips and valuable resources.</p>
 
                             <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
+                            <form action="./" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Your Mail">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>

@@ -1,3 +1,51 @@
+<?php
+    require('connect.php');
+
+    $sort = $_POST['sort'] ?? '';
+    $sortDirection = $_POST['sortDirection'] ?? '';
+
+    $hosting_type = $_POST['hosting_type'] ?? '';
+    $price_per_month = $_POST['price_per_month'] ?? 0;
+    $price_per_month_operator = $_POST['price_per_month_operator'] ?? 0;
+    $storage = $_POST['storage'] ?? 0;
+    $storage_operator = $_POST['storage_operator'] ?? 0;
+    $ram = $_POST['ram'] ?? 0;
+    $ram_operator = $_POST['ram_operator'] ?? 0;
+    $core = $_POST['core'] ?? 0;
+    $core_operator = $_POST['core_operator'] ?? 0;
+
+    if ($sort == '') $sortQuery = 'package_id ASC';
+    else $sortQuery = $sort . ' ' . $sortDirection . ', package_id ASC';
+
+    $whereQuery = '';
+
+    if ($hosting_type != '') $whereQuery .= " AND hosting_type = '$hosting_type' ";
+
+    if ($price_per_month_operator != 0) {
+        if ($price_per_month_operator == 1) $whereQuery .= " AND price_per_month < $price_per_month";
+        else if ($price_per_month_operator == 2) $whereQuery .= " AND price_per_month = $price_per_month";
+        else if ($price_per_month_operator == 3) $whereQuery .= " AND price_per_month > $price_per_month";
+    }
+
+    if ($storage_operator != 0) {
+        if ($storage_operator == 1) $whereQuery .= " AND storage < $storage";
+        else if ($storage_operator == 2) $whereQuery .= " AND storage = $storage";
+        else if ($storage_operator == 3) $whereQuery .= " AND storage > $storage";
+    }
+
+    if ($ram_operator != 0) {
+        if ($ram_operator == 1) $whereQuery .= " AND ram < $ram";
+        else if ($ram_operator == 2) $whereQuery .= " AND ram = $ram";
+        else if ($ram_operator == 3) $whereQuery .= " AND ram > $ram";
+    }
+
+    if ($core_operator != 0) {
+        if ($core_operator == 1) $whereQuery .= " AND core < $core";
+        else if ($core_operator == 2) $whereQuery .= " AND core = $core";
+        else if ($core_operator == 3) $whereQuery .= " AND core > $core";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +101,7 @@
                     <nav class="classy-navbar justify-content-between" id="hamiNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand" href="./"><img src="./img/core-img/logo.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -71,11 +119,6 @@
                                 <?php
                                     require('classynav.php');
                                 ?>
-
-                                <!-- Live Chat -->
-                                <div class="live-chat-btn ml-5 mt-4 mt-lg-0 ml-md-4">
-                                    <a href="#" class="btn hami-btn live--chat--btn"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</a>
-                                </div>
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -94,7 +137,7 @@
                     <div class="breadcrumb-content">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item"><a href="./"><i class="icon_house_alt"></i> Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Hosting</li>
                             </ol>
                         </nav>
@@ -118,53 +161,177 @@
                 </div>
             </div>
 
+            <!-- Form -->
+            <div class="card mb-30">
+                <div class="card-header">
+                    Sort &amp; Filter
+                </div>
+                <div class="card-body">
+                    <form id="form-filter" action="./hosting.php" method="post">
+                        <h5 class="card-title">Sort</h5>
+                        <div class="form-group row">
+                            <label class="col-12 col-lg-2 col-form-label">Sort By</label>
+                            <div class="col-12 col-lg-5 mb-1">
+                                <select class="form-control" name="sort">
+                                    <option value="">Default</option>
+                                    <option value="price_per_month" <?=$sort=='price_per_month'?'selected="selected"':''?> >Price</option>
+                                    <option value="storage" <?=$sort=='storage'?'selected="selected"':''?> >Disk Space</option>
+                                    <option value="ram" <?=$sort=='ram'?'selected="selected"':''?> >RAM</option>
+                                    <option value="core" <?=$sort=='core'?'selected="selected"':''?> >CPU(Core)</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-5 mb-1">
+                                <select class="form-control" name="sortDirection">
+                                    <option value="ASC" <?=$sortDirection=='ASC'?'selected="selected"':''?> >Ascending</option>
+                                    <option value="DESC" <?=$sortDirection=='DESC'?'selected="selected"':''?> >Descending</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h5 class="card-title">Filter</h5>
+                        <div class="form-group row">
+                            <label class="col-12 col-lg-2 col-form-label">Hosting Type</label>
+                            <div class="col-lg-10 mb-1">
+                                <select class="form-control" name="hosting_type">
+                                    <option value="">All</option>
+                                    <option value="Cloud" <?=$hosting_type=='Cloud'?'selected="selected"':''?> >Cloud</option>
+                                    <option value="VPS" <?=$hosting_type=='VPS'?'selected="selected"':''?> >VPS</option>
+                                </select>
+                            </div>
+
+                            <label class="col-12 col-lg-2 col-form-label">Price</label>
+                            <div class="col-12 col-lg-2 mb-1">
+                                <select class="form-control" name="price_per_month_operator">
+                                    <option value="0">Operator</option>
+                                    <option value="1" <?=$price_per_month_operator==1?'selected="selected"':''?> >&lt;</option>
+                                    <option value="2" <?=$price_per_month_operator==2?'selected="selected"':''?> >=</option>
+                                    <option value="3" <?=$price_per_month_operator==3?'selected="selected"':''?> >&gt;</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-8 mb-1">
+                                <input type="number" name="price_per_month" class="form-control" value="<?=$price_per_month?>" />
+                            </div>
+
+                            <label class="col-12 col-lg-2 col-form-label">Disk Space</label>
+                            <div class="col-12 col-lg-2 mb-1">
+                                <select class="form-control" name="storage_operator">
+                                    <option value="0">Operator</option>
+                                    <option value="1" <?=$storage_operator==1?'selected="selected"':''?> >&lt;</option>
+                                    <option value="2" <?=$storage_operator==2?'selected="selected"':''?> >=</option>
+                                    <option value="3" <?=$storage_operator==3?'selected="selected"':''?> >&gt;</option>
+                                </select>
+                            </div>
+                            <div class="col-10 col-lg-7 mb-1">
+                                <input type="number" name="storage" class="form-control" value="<?=$storage?>" />
+                            </div>
+                            <label class="col-2 col-lg-1 col-form-label">GB</label>
+
+                            <label class="col-12 col-lg-2 col-form-label">RAM</label>
+                            <div class="col-12 col-lg-2 mb-1">
+                                <select class="form-control" name="ram_operator">
+                                    <option value="0">Operator</option>
+                                    <option value="1" <?=$ram_operator==1?'selected="selected"':''?> >&lt;</option>
+                                    <option value="2" <?=$ram_operator==2?'selected="selected"':''?> >=</option>
+                                    <option value="3" <?=$ram_operator==3?'selected="selected"':''?> >&gt;</option>
+                                </select>
+                            </div>
+                            <div class="col-10 col-lg-7 mb-1">
+                                <input type="number" name="ram" class="form-control" value="<?=$ram?>" />
+                            </div>
+                            <label class="col-2 col-lg-1 col-form-label">GB</label>
+
+                            <label class="col-12 col-lg-2 col-form-label">CPU(Core)</label>
+                            <div class="col-12 col-lg-2 mb-1">
+                                <select class="form-control" name="core_operator">
+                                    <option value="0">Operator</option>
+                                    <option value="1" <?=$core_operator==1?'selected="selected"':''?> >&lt;</option>
+                                    <option value="2" <?=$core_operator==2?'selected="selected"':''?> >=</option>
+                                    <option value="3" <?=$core_operator==3?'selected="selected"':''?> >&gt;</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-8 mb-1">
+                                <input type="number" name="core" class="form-control" value="<?=$core?>" />
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn hami-btn btn-3 mt-15">Go</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div class="row justify-content-center">
 
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan mb-100">
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>RumahWeb</h4>
-                            <p>Paket Personal</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2>IDR 11k</h2>
-                            <p>/bulan</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="https://www.rumahweb.com/hosting-murah/" class="btn hami-btn w-100 mb-30" target="_blank">Lihat Detail</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 100MB Space</p>
-                            <p><i class="icon_check"></i> 5GB Traffic Limit</p>
-                            <p><i class="icon_check"></i> Unlimited Email Account &amp; MySQL</p>
-                            <p><i class="icon_check"></i> 0 Add-on Domain</p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    $rs = $mysqli->query("SELECT * FROM packages a JOIN providers b ON a.provider_id = b.provider_id WHERE 1 = 1 $whereQuery ORDER BY $sortQuery");
 
-                <!-- Single Price Plan -->
+                    while ($data = $rs->fetch_assoc()) {
+                        $storage = $data['storage'];
+                        $ram = $data['ram'];
+                        $bandwidth = $data['bandwidth'];
+                        $core = $data['core'];
+                        $cpu = $data['cpu'];
+                        $addon_domain = $data['addon_domain'];
+
+                        if ($storage < 1000) $storage .= 'MB';
+                        else if ($storage == 999999999) $storage = 'Unlimited';
+                        else $storage = ($storage / 1000) . 'GB';
+
+                        if ($ram == 0) $ram = 'Shared';
+                        else if ($ram < 0.25) $ram = '128MB';
+                        else if ($ram < 0.5) $ram = '256MB';
+                        else if ($ram < 0.75) $ram = '512MB';
+                        else if ($ram < 1) $ram = '768MB';
+                        else $ram = number_format($ram, 0) . 'GB';
+
+                        if ($core == 0) $core = 'Shared';
+                        else if (floor($core) == $core) $core = number_format($core, 0);
+
+                        if ($addon_domain == 999999999) $addon_domain = 'Unlimited';
+
+                        ?>
+
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-price-plan mb-100">
+                                    <div class="price-plan-title">
+                                        <h4><?=$data['provider_name']?></h4>
+                                        <p><?=$data['package_name']?></p>
+                                    </div>
+                                    <div class="price-plan-value">
+                                        <h2><?=number_format($data['price_per_month'], 0, ',', '.')?></h2>
+                                        <p>/bulan</p>
+                                    </div>
+                                    <a href="<?=$data['link']?>" class="btn hami-btn w-100 mb-30" target="_blank">Order</a>
+                                    <div class="price-plan-desc">
+                                        <p><?=$data['hosting_type']?></p>
+                                        <p><i class="icon_check"></i> <?=$storage?> Disk Space</p>
+                                        <p><i class="icon_check"></i> <?=$ram?> RAM</p>
+                                        <p><i class="icon_check"></i> <?=$core?> CPU(Core)</p>
+                                        <p><i class="icon_check"></i> <?=$addon_domain?> Addon Domain</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <?php
+                    }
+                ?>
+
+                <!--
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-price-plan active mb-100">
-                        <!-- Popular Tag -->
                         <div class="popular-tag">
                             <i class="icon_star"></i> Best Plan <i class="icon_star"></i>
                         </div>
-                        <!-- Title -->
                         <div class="price-plan-title">
                             <h4>RumahWeb</h4>
                             <p>Paket Professional</p>
                         </div>
-                        <!-- Value -->
                         <div class="price-plan-value">
                             <h2>IDR 25k</h2>
                             <p>/bulan</p>
                         </div>
-                        <!-- Button -->
                         <a href="https://www.rumahweb.com/hosting-murah/" class="btn hami-btn w-100 mb-30" target="_blank">Lihat Detail</a>
-                        <!-- Description -->
                         <div class="price-plan-desc">
                             <p><i class="icon_check"></i> 1GB Space</p>
                             <p><i class="icon_check"></i> Unlimited Traffic Limit</p>
@@ -173,191 +340,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan mb-100">
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>RumahWeb</h4>
-                            <p>Paket Enterprise</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2>IDR 140k</h2>
-                            <p>/bulan</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="https://www.rumahweb.com/hosting-murah/" class="btn hami-btn w-100 mb-30" target="_blank">Lihat Detail</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 3GB Space</p>
-                            <p><i class="icon_check"></i> Unlimited Traffic Limit</p>
-                            <p><i class="icon_check"></i> Unlimited Email Account &amp; MySQL</p>
-                            <p><i class="icon_check"></i> 5 Add-on Domain</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan mb-100">
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>DewaWeb</h4>
-                            <p>Paket Hunter</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2>IDR 40k</h2>
-                            <p>/bulan</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="https://www.dewaweb.com/hosting-murah" class="btn hami-btn w-100 mb-30" target="_blank">Lihat Detail</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 2GB Storage</p>
-                            <p><i class="icon_check"></i> 1 Core</p>
-                            <p><i class="icon_check"></i> 256MB Memory</p>
-                            <p><i class="icon_check"></i> 3 Add-on Domain</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan active mb-100">
-                        <!-- Popular Tag -->
-                        <div class="popular-tag">
-                            <i class="icon_star"></i> Best Plan <i class="icon_star"></i>
-                        </div>
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>DewaWeb</h4>
-                            <p>Paket Warrior</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2>IDR 90k</h2>
-                            <p>/bulan</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="https://www.dewaweb.com/hosting-murah" class="btn hami-btn w-100 mb-30" target="_blank">Lihat Detail</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 3GB Storage</p>
-                            <p><i class="icon_check"></i> 1 Core</p>
-                            <p><i class="icon_check"></i> 512MB Memory</p>
-                            <p><i class="icon_check"></i> 6 Add-on Domain</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan mb-100">
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>DewaWeb</h4>
-                            <p>Paket Guardian</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2>IDR 140k</h2>
-                            <p>/bulan</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="https://www.dewaweb.com/hosting-murah" class="btn hami-btn w-100 mb-30" target="_blank">Lihat Detail</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 6GB Storage</p>
-                            <p><i class="icon_check"></i> 1.5 Core</p>
-                            <p><i class="icon_check"></i> 1024MB Memory</p>
-                            <p><i class="icon_check"></i> 10 Add-on Domain</p>
-                        </div>
-                        <!-- View All Feature Button -->
-                        <a href="#" class="btn view-all-btn">Click here to see all features</a>
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan mb-100">
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>NiagaHoster</h4>
-                            <p>Standard</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2>IDR 350k</h2>
-                            <p>/bulan</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="https://www.niagahoster.co.id/cloud-hosting" class="btn hami-btn w-100 mb-30" target="_blank">Lihat Detail</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 40GB Disk Space</p>
-                            <p><i class="icon_check"></i> 4GB RAM</p>
-                            <p><i class="icon_check"></i> Unlimited Bandwidth</p>
-                            <p><i class="icon_check"></i> 3 CPU Core</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan active mb-100">
-                        <!-- Popular Tag -->
-                        <div class="popular-tag">
-                            <i class="icon_star"></i> Best Plan <i class="icon_star"></i>
-                        </div>
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>NiagaHoster</h4>
-                            <p>Premium</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2>IDR 600k</h2>
-                            <p>/bulan</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="https://www.niagahoster.co.id/cloud-hosting" class="btn hami-btn w-100 mb-30" target="_blank">Get Started</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 60GB Disk Space</p>
-                            <p><i class="icon_check"></i> 6GB RAM</p>
-                            <p><i class="icon_check"></i> Unlimited Bandwidth</p>
-                            <p><i class="icon_check"></i> 6 CPU Core</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan mb-100">
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>NiagaHoster</h4>
-                            <p>Corporate</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2>1200k</h2>
-                            <p>/bulan</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="https://www.niagahoster.co.id/cloud-hosting" class="btn hami-btn w-100 mb-30" target="_blank">Lihat Detail</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 120GB Disk Space</p>
-                            <p><i class="icon_check"></i> 10GB RAM</p>
-                            <p><i class="icon_check"></i> Unlimited Bandwidth</p>
-                            <p><i class="icon_check"></i> 8 CPU Core</p>
-                        </div>
-                    </div>
-                </div>
+                -->
 
             </div>
         </div>
@@ -535,7 +518,7 @@
                             <p>Subscribe to our email newsletter for useful tips and valuable resources.</p>
 
                             <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
+                            <form action="./" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Your Mail">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>
@@ -557,7 +540,7 @@
                         <!-- Copywrite Text -->
                         <div class="copywrite-text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">Kelompok 6</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="./" target="_blank">Kelompok 6</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                         </div>

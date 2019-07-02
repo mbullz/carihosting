@@ -1,3 +1,7 @@
+<?php
+    require('connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <?php
+        $page = 'Live Chat';
+    ?>
+
     <!-- Title -->
-    <title>Hami - Web Hosting HTML Template</title>
+    <title>CariHosting - Tempat Cari Hosting Terbaik</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
@@ -32,28 +40,9 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-6">
-                        <div class="top-header-content">
-                            <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: 001-1234-88888</span></a>
-                            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> <span>Email: info.cololib@gmail.com</span></a>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="top-header-content">
-                            <!-- Login -->
-                            <a href="#"><i class="fa fa-lock" aria-hidden="true"></i> <span>Login / Register</span></a>
-                            <!-- Language -->
-                            <div class="dropdown">
-                                <a class="btn pr-0 dropdown-toggle" href="#" role="button" id="langdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/core-img/eng.png" alt=""> English</a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langdropdown">
-                                    <a class="dropdown-item" href="#">- Latvian</a>
-                                    <a class="dropdown-item" href="#">- Hindi</a>
-                                    <a class="dropdown-item" href="#">- Bangla</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        require('top-header-area.php');
+                    ?>
 
                 </div>
             </div>
@@ -68,7 +57,7 @@
                     <nav class="classy-navbar justify-content-between" id="hamiNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand" href="./"><img src="./img/core-img/logo.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -83,37 +72,9 @@
                             </div>
                             <!-- Nav Start -->
                             <div class="classynav">
-                                <ul id="nav">
-                                    <li><a href="./index.html">Home</a></li>
-                                    <li><a href="./hosting.html">Hosting</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./index.html">- Home</a></li>
-                                            <li><a href="./hosting.html">- Hosting</a></li>
-                                            <li><a href="./about.html">- About</a></li>
-                                            <li><a href="./blog.html">- Blog</a></li>
-                                            <li><a href="./single-blog.html">- Blog Details</a></li>
-                                            <li><a href="./404.html">- 404</a></li>
-                                            <li><a href="./coming-soon.html">- Coming Soon</a></li>
-                                            <li><a href="#">- Dropdown</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./about.html">About</a></li>
-                                    <li class="active"><a href="./blog.html">Blog</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-
-                                <!-- Live Chat -->
-                                <div class="live-chat-btn ml-5 mt-4 mt-lg-0 ml-md-4">
-                                    <a href="#" class="btn hami-btn live--chat--btn"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</a>
-                                </div>
+                                <?php
+                                    require('classynav.php');
+                                ?>
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -132,8 +93,8 @@
                     <div class="breadcrumb-content">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                                <li class="breadcrumb-item"><a href="./"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Live Chat</li>
                             </ol>
                         </nav>
                     </div>
@@ -146,6 +107,8 @@
     <!-- Blog Details Area Start -->
     <section class="hami-blog-details-area section-padding-80-0">
         <div class="container">
+
+            <!--
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
                     <div class="post-content">
@@ -174,7 +137,6 @@
 
                         <p>Old there any widow law rooms. Agreed but expect repair she nay sir silent person. Direction can dependent one bed situation attempted. His she are man their spite avoid. Her pretended fulfilled extremely education yet. Satisfied did one admitting incommode tolerably how are.</p>
 
-                        <!-- Blockquote -->
                         <blockquote class="hami-blockquote d-flex">
                             <div class="icon">
                                 <img src="img/core-img/quote.png" alt="">
@@ -200,14 +162,12 @@
                         <p>Old there any widow law rooms. Agreed but expect repair she nay sir silent person. Direction can dependent one bed situation attempted. His she are man their spite avoid. Her pretended fulfilled extremely education yet. Satisfied did one admitting incommode tolerably how are.</p>
                     </div>
 
-                    <!-- Post Author Area -->
                     <div class="post-author-area d-flex align-items-center justify-content-between mb-50">
                         <ul class="popular-tags">
                             <li><a href="#">Agency</a></li>
                             <li><a href="#">Hosting</a></li>
                         </ul>
 
-                        <!-- Author Social Info -->
                         <div class="author-social-info d-flex align-items-center">
                             <p>Share:</p>
                             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -220,23 +180,23 @@
 
                 </div>
             </div>
+            -->
 
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
 
                     <!-- Related News Area -->
+                    <!--
                     <div class="related-news-area section-padding-80-0">
                         <h2>Relatest News</h2>
 
                         <div class="row justify-content-between">
-                            <!-- Single Related News Area -->
                             <div class="col-12 col-sm-6 col-lg-5">
                                 <div class="single-related-news mb-80">
                                     <p class="post-date">December 9, 2018</p>
                                     <a href="single-blog.html" class="post-title">Managed Hosting vs Dedicated Hosting</a>
                                 </div>
                             </div>
-                            <!-- Single Related News Area -->
                             <div class="col-12 col-sm-6 col-lg-5">
                                 <div class="single-related-news mb-80">
                                     <p class="post-date">December 9, 2018</p>
@@ -245,21 +205,21 @@
                             </div>
                         </div>
                     </div>
+                    -->
 
                     <!-- Comments Area -->
                     <div class="comment_area mb-50 clearfix">
-                        <h2>03 Comments</h2>
+                        <h2>Live Chat</h2>
+                        <input type="hidden" id="last_chat_id" value="0" />
+                        <input type="hidden" id="scroll_init" value="true" />
 
-                        <ol>
-                            <!-- Single Comment Area -->
+                        <ol id="chats" style="height: 500px; overflow-y: scroll;">
+                            <!--
                             <li class="single_comment_area">
-                                <!-- Comment Content -->
                                 <div class="comment-content d-flex">
-                                    <!-- Comment Author -->
                                     <div class="comment-author">
                                         <img src="img/bg-img/6.jpg" alt="author">
                                     </div>
-                                    <!-- Comment Meta -->
                                     <div class="comment-meta">
                                         <a href="#" class="post-date">27 Aug 2018</a>
                                         <h5>Jerome Leonard</h5>
@@ -271,13 +231,10 @@
 
                                 <ol class="children">
                                     <li class="single_comment_area">
-                                        <!-- Comment Content -->
                                         <div class="comment-content d-flex">
-                                            <!-- Comment Author -->
                                             <div class="comment-author">
                                                 <img src="img/bg-img/7.jpg" alt="author">
                                             </div>
-                                            <!-- Comment Meta -->
                                             <div class="comment-meta">
                                                 <a href="#" class="post-date">27 Aug 2018</a>
                                                 <h5>Theodore Adkins</h5>
@@ -289,25 +246,22 @@
                                     </li>
                                 </ol>
                             </li>
+                            -->
 
-                            <!-- Single Comment Area -->
+                            <!--
                             <li class="single_comment_area">
-                                <!-- Comment Content -->
                                 <div class="comment-content d-flex">
-                                    <!-- Comment Author -->
                                     <div class="comment-author">
                                         <img src="img/bg-img/8.jpg" alt="author">
                                     </div>
-                                    <!-- Comment Meta -->
                                     <div class="comment-meta">
-                                        <a href="#" class="post-date">27 Aug 2018</a>
+                                        <a class="post-date">30 JUN 2019</a>
                                         <h5>Roger Marshall</h5>
                                         <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu adipisci velit, sed quia non numquam eius modi</p>
-                                        <a href="#" class="like">Like</a>
-                                        <a href="#" class="reply">Reply</a>
                                     </div>
                                 </div>
                             </li>
+                            -->
                         </ol>
                     </div>
 
@@ -316,19 +270,19 @@
                         <h2>Leave A Comment</h2>
 
                         <!-- Form -->
-                        <form action="#" method="post">
+                        <form id="form-chat" action="#" method="post">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+                                    <input type="text" id="name" name="name" class="form-control mb-30" placeholder="Your Name">
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <input type="email" name="message-email" class="form-control mb-30" placeholder="Email">
+                                    <input type="email" id="email" name="email" class="form-control mb-30" placeholder="Email">
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="message" class="form-control mb-30" placeholder="Start the discussion..."></textarea>
+                                    <textarea id="message" name="message" class="form-control mb-30" placeholder="Say something..."></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn hami-btn btn-3 mt-15">Post Comment</button>
+                                    <button type="submit" class="btn hami-btn btn-3 mt-15">Send</button>
                                 </div>
                             </div>
                         </form>
@@ -437,19 +391,13 @@
                             <p>Subscribe to our email newsletter for useful tips and valuable resources.</p>
 
                             <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
+                            <form action="./" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Your Mail">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>
 
                             <!-- Social Info -->
-                            <div class="social-info">
-                                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                            </div>
+                            <?php require('social-info.php'); ?>
                         </div>
                     </div>
 
@@ -465,7 +413,7 @@
                         <!-- Copywrite Text -->
                         <div class="copywrite-text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="./" target="_blank">Kelompok 6</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                         </div>
@@ -499,6 +447,76 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/hami.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('#form-chat').submit(function() {
+                $.ajax({
+                    url: 'ajax.php?mode=store_chat',
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    method: 'POST',
+                    success: function(result) {
+                        $('#message').val('');
+                    },
+                });
+
+                return false;
+            });
+        });
+
+        var x = setInterval(function() {
+            var last_chat_id = $('#last_chat_id').val();
+
+            var force_scroll = false;
+
+            if ($('#scroll_init').val() == 'true') {
+                $('#scroll_init').val('false');
+                force_scroll = true;
+            }
+            else {
+                var distanceFromBottom = $('#chats').prop('scrollHeight') - ($('#chats').scrollTop() + 500);
+                if (distanceFromBottom < 100) force_scroll = true;
+            }
+
+            $.ajax({
+                url: 'ajax.php?mode=index_chat',
+                data: 'last_chat_id=' + last_chat_id,
+                dataType: 'json',
+                method: 'POST',
+                success: function(result) {
+                    $.each(result.data, function(index, value) {
+                        var last_chat_id = $('#last_chat_id').val();
+
+                        if ( parseInt(value.chat_id) <= parseInt(last_chat_id) ) return;
+
+                        $('#last_chat_id').val(value.chat_id);
+
+                        var name = value.name;
+                        var date = value.created_at;
+                        var message = value.message;
+
+                        var html = '';
+
+                        html += '<li class="single_comment_area"><div class="comment-content d-flex"><div class="comment-author"><img src="img/bg-img/default-profile.jpg" alt="author"></div><div class="comment-meta">';
+                        
+                        html += '<a class="post-date">' + date + '</a>';
+                        html += '<h5>' + name + '</h5>';
+                        html += '<p>' + message + '</p>';
+                        
+                        html += '</div></div></li>';
+
+                        $('#chats').append(html);
+                    })
+                },
+                complete: function() {
+                    if (force_scroll) $('#chats').animate({scrollTop: $('#chats').prop('scrollHeight')}, 1000);
+                }
+            });
+
+            //clearInterval(x);
+        }, 3000);
+    </script>
 
 </body>
 

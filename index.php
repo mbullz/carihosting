@@ -71,11 +71,6 @@
                                 <?php
                                     require('classynav.php');
                                 ?>
-
-                                <!-- Live Chat -->
-                                <div class="live-chat-btn ml-5 mt-4 mt-lg-0 ml-md-4">
-                                    <a href="#" class="btn hami-btn live--chat--btn"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</a>
-                                </div>
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -425,7 +420,9 @@
                             <h6><i class="icon_check"></i> 1-Click WordPress Install</h6>
                         </div>
                         <!-- Button -->
+                        <!--
                         <a href="#" class="btn hami-btn">Get Start Now!</a>
+                        -->
                     </div>
                 </div>
             </div>
@@ -549,7 +546,7 @@
                             <p>Subscribe to our email newsletter for useful tips and valuable resources.</p>
 
                             <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
+                            <form action="./" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Your Mail">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>
@@ -571,7 +568,7 @@
                         <!-- Copywrite Text -->
                         <div class="copywrite-text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">Kelompok 6</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="./" target="_blank">Kelompok 6</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                         </div>

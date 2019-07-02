@@ -28,3 +28,8 @@
 	<li><a href="#">Contact</a></li>
 	-->
 </ul>
+
+<!-- Live Chat -->
+<div class="live-chat-btn ml-5 mt-4 mt-lg-0 ml-md-4">
+    <a href="livechat.php" class="btn hami-btn live--chat--btn"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</a>
+</div>
