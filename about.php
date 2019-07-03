@@ -118,7 +118,7 @@
                 <div class="col-12 col-md-6">
                     <div class="video-content-area pr-3 mb-100">
                         <img src="img/bg-img/4.jpg" alt="">
-                        <a href="https://www.youtube.com/watch?v=Ldd8yjjo6jA" class="video-play-btn"><i class="fa fa-play"></i></a>
+                        <a href="" class="video-play-btn"><i class="fa fa-play"></i></a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
