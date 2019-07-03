@@ -211,7 +211,7 @@
                     <div class="single-team-member-area d-flex align-items-center mb-30">
                         <!-- Team Thumbnail -->
                         <div class="team-thumbnail">
-                            <img src="img/bg-img/9.jpg" alt="">
+                            <img src="img/bg-img/robert.jpeg" alt="">
                         </div>
                         <!-- Team Content -->
                         <div class="team-content">
