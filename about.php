@@ -263,12 +263,12 @@
                                         <img src="img/core-img/quote.png" alt="">
                                     </div>
                                 </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
+                                <h5>Setiap orang bisa mencuri idemu, tapi tidak setiap orang bisa mencuri tindakanmu.</h5>
                             </div>
                             <!-- Testimonial -->
                             <div class="testimonial-thumbnail-title d-flex align-items-center">
                                 <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/10.jpg" alt="">
+                                    <img src="img/bg-img/nadiemmakarim.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
                                     <h5>Nadiem Makarim</h5>
@@ -293,12 +293,12 @@
                                         <img src="img/core-img/quote.png" alt="">
                                     </div>
                                 </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
+                                <h5>Bermimpilah dengan mata terbuka karena tidak ada hal-hal besar yang sulit dicapai.</h5>
                             </div>
                             <!-- Testimonial -->
                             <div class="testimonial-thumbnail-title d-flex align-items-center">
                                 <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/11.jpg" alt="">
+                                    <img src="img/bg-img/williamtanuwijaya.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
                                     <h5>William Tanuwijaya</h5>
@@ -323,12 +323,12 @@
                                         <img src="img/core-img/quote.png" alt="">
                                     </div>
                                 </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
+                                <h5>Jika anda membangun pelayanan yang baik, maka orang-orang akan datang.</h5>
                             </div>
                             <!-- Testimonial -->
                             <div class="testimonial-thumbnail-title d-flex align-items-center">
                                 <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/12.jpg" alt="">
+                                    <img src="img/bg-img/ferryunardi.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
                                     <h5>Ferry Unardi</h5>
@@ -353,12 +353,12 @@
                                         <img src="img/core-img/quote.png" alt="">
                                     </div>
                                 </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
+                                <h5>Kendala terbesar dalam membangun usaha adalah diri sendiri yang terlalu malas.</h5>
                             </div>
                             <!-- Testimonial -->
                             <div class="testimonial-thumbnail-title d-flex align-items-center">
                                 <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/13.jpg" alt="">
+                                    <img src="img/bg-img/achmadzaky.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
                                     <h5>Achmad Zaky</h5>
@@ -383,15 +383,15 @@
                                         <img src="img/core-img/quote.png" alt="">
                                     </div>
                                 </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
+                                <h5>Ketika ditanya fashion, buat gue penting, terutama untuk menghargai penonton.</h5>
                             </div>
                             <!-- Testimonial -->
                             <div class="testimonial-thumbnail-title d-flex align-items-center">
                                 <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/10.jpg" alt="">
+                                    <img src="img/bg-img/chandraliow.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
-                                    <h5>Chandra Timothy Liow</h5>
+                                    <h5>Chandra Liow</h5>
                                     <span>CEO Mister Potato</span>
                                 </div>
                             </div>
@@ -413,12 +413,12 @@
                                         <img src="img/core-img/quote.png" alt="">
                                     </div>
                                 </div>
-                                <h5>By switching to Hami Anycast DNS system we were able to decrease the worldwide app latency immensely.</h5>
+                                <h5>Sukses itu mudah tapi tidak gratis, perlu perjuangan dan pengorbanan.</h5>
                             </div>
                             <!-- Testimonial -->
                             <div class="testimonial-thumbnail-title d-flex align-items-center">
                                 <div class="testimonial-thumbnail">
-                                    <img src="img/bg-img/11.jpg" alt="">
+                                    <img src="img/bg-img/harytanoesoedibjo.jpg" alt="">
                                 </div>
                                 <div class="testimonial-title">
                                     <h5>Hary Tanoesoedibjo</h5>

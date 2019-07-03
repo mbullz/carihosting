@@ -104,7 +104,7 @@
                                     <h2 data-animation="fadeInLeftBig" data-delay="200ms" data-duration="1s">
                                         Tempat nya <br> Cari Hosting
                                     </h2>
-                                    <h3 data-animation="fadeInLeftBig" data-delay="400ms" data-duration="1s">Starting at <span>$7.99</span> $2.95/month*</h3>
+                                    <h3 data-animation="fadeInLeftBig" data-delay="400ms" data-duration="1s">Mulai dari 6 ribuan/bulan*</h3>
                                     <p data-animation="fadeInLeftBig" data-delay="600ms" data-duration="1s">
                                         Semua INFORMASI Hosting yang kamu butuhkan ada disini!
                                     </p>
@@ -134,7 +134,7 @@
                                     <h2 data-animation="fadeInUpBig" data-delay="200ms" data-duration="1s">
                                         Tempat nya <br> Cari Hosting
                                     </h2>
-                                    <h3 data-animation="fadeInUpBig" data-delay="400ms" data-duration="1s">Starting at <span>$7.99</span> $2.95/month*</h3>
+                                    <h3 data-animation="fadeInUpBig" data-delay="400ms" data-duration="1s">Jaminan server uptime 99,98%</h3>
                                     <p data-animation="fadeInUpBig" data-delay="600ms" data-duration="1s">Everything you will EVER need to Host and Manage your Website!</p>
                                     <!--
                                     <a href="#" class="btn hami-btn btn-2" data-animation="fadeInUpBig" data-delay="800ms" data-duration="1s">Get Start Now!</a>
